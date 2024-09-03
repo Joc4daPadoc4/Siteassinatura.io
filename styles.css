@@ -1,0 +1,206 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --vermelho-principal: #E63946;
+    --vermelho-efeito: #D62839;
+    --cor-de-fundo: #000000;
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+/* Estilos gerais do corpo */
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px; /* Fonte padrão para melhor leitura */
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset de margens e preenchimentos */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos do container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+/* Estilos da seção principal */
+.principal {
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 2em;
+    color: var(--branco-principal);
+}
+
+/* Estilo do título principal */
+.container__titulo {
+    font-size: 2em; /* Ajuste para melhor legibilidade */
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+/* Estilo das imagens dentro do container */
+.container__imagem {
+    max-width: 100%;
+    height: auto;
+    margin: 1em 0;
+}
+
+/* Estilos dos botões */
+.container__botao,
+.secundario__botao,
+.container__botao.botao_teste {
+    background-color: var(--vermelho-principal); /* Cor uniforme para todos os botões */
+    border-radius: 4px;
+    padding: 0.75em 1.5em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.5em 0;
+    transition: background-color 0.3s, color 0.3s;
+    border: none; /* Remove a borda padrão para todos os botões */
+}
+
+.container__botao.botao_secundario {
+    background-color: transparent;
+    border: 1px solid var(--branco-principal);
+}
+
+.container__botao:hover,
+.secundario__botao:hover,
+.container__botao.botao_teste:hover {
+    background-color: var(--vermelho-efeito); /* Cor ao passar o mouse */
+    color: var(--cor-de-fundo); /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos das descrições */
+.container__descricao {
+    padding: 1em;
+    text-align: center;
+}
+
+.descricao__titulo {
+    font-size: 1.5em; /* Ajuste para melhor legibilidade */
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+/* Estilo das imagens secundárias */
+.secundario__imagem {
+    max-width: 100%;
+    height: auto;
+    margin: 1em 0;
+}
+
+/* Estilo da seção de dispositivos */
+.dispositivos {
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.dispositivos__titulo {
+    font-size: 1.75em; /* Ajuste para melhor legibilidade */
+    margin-bottom: 1em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 1em;
+}
+
+.lista__item {
+    text-align: center;
+}
+
+.lista__imagem {
+    width: 50px;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+.lista__titulo {
+    font-size: 1em; /* Ajuste para melhor legibilidade */
+}
+
+/* Estilos do rodapé */
+.rodape {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: var(--cor-de-fundo);
+}
+
+.rodape__logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.rodape__lista {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.lista__link a {
+    color: var(--branco-principal);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.lista__link a:hover {
+    color: var(--vermelho-principal);
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    font-size: 0.875em; /* Fonte ajustada */
+    margin-top: 1em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container__titulo {
+        font-size: 1.5em;
+    }
+
+    .descricao__titulo {
+        font-size: 1.25em;
+    }
+
+    .descricao__texto,
+    .rodape__texto {
+        font-size: 0.75em;
+    }
+
+    .lista__item {
+        font-size: 0.875em;
+    }
+
+    .dispositivos__titulo {
+        font-size: 1.5em;
+    }
+
+    .rodape__logo {
+        max-width: 120px;
+    }
+}
